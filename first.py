@@ -5,16 +5,23 @@ import time
 # log/pass
 f = open("files/sign.txt", "r", encoding='utf-8')
 time.sleep(0.5)
+log = []
+n_log = 0
 for line in f:
-    x = line[:-1].split(":")
-    print(x)
-    username = x[0]
-    password = x[1]
+    log.append(line[:-1].split(":"))
+    print(log)
 f.close()
+print(f'len(log) = {len(log)}')
+
+username, password = log[0]
+print(f'first => {username}:{password}')
+
+snd_name, snd_pswd = log[1]
+print(f'second => {snd_name}:{snd_pswd}')
 time.sleep(.5)
 
 # comment
-fc = open("files/cat_comment_rus.txt", "r", encoding='utf-8')
+fc = open("files/first_comment.txt", "r", encoding='utf-8')
 time.sleep(0.5)
 for line in fc:
     comment = line[:-1]
@@ -23,7 +30,7 @@ print(comment)
 time.sleep(2)
 
 # tags
-ft = open("files/cat_tags_rus.txt", "r", encoding='utf-8')
+ft = open("files/first_tags.txt", "r", encoding='utf-8')
 time.sleep(2)
 tags = []
 for line in ft:
