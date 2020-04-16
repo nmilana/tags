@@ -63,6 +63,7 @@ browser.get("https://www.instagram.com/" + username + "/")
 time.sleep(3)
 
 print(f"The URL of the current page: {browser.current_url}")
+print(f"The current page title: {browser.title}")
 
 print("# go to the first post")
 browser.find_element_by_xpath(
@@ -79,6 +80,10 @@ for c in comment:
 time.sleep(1)
 browser.find_element_by_css_selector('textarea+button').click()
 time.sleep(2)
+
+input("Wait a new post of an other user")
+browser.refresh()
+time.sleep(1)
 
 print("# find the biggest comment number")
 k = len(browser.find_elements_by_css_selector('ul > ul'))
