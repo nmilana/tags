@@ -1,0 +1,30 @@
+===================
+Find the last nummer of the includes()
+-----------------------
+> t = []
+[]
+> document.querySelectorAll('p').forEach(x => t.push(x.textContent))
+undefined
+--------------------
+> t.length
+9
+> t.length - t.reverse().findIndex(x => x.includes("</p"))
+8
+> t.reverse()
+(9) [...]
+--------------------
+------------------
+> t.map(x => x.includes("</p"))
+(9) [false, false, true, true, true, true, true, true, false]
+> t.map(x => x.includes("</p")).lastIndexOf(true)
+7
++++++++++
+++++++++++
+> t = []
+[]
+> document.querySelectorAll('p').forEach(x => t.push(x.innerText))
+undefined
+> t.map(x => x.includes("</p"))
+(7) [true, true, true, true, true, true, false]
+> t.map(x => x.includes("</p")).lastIndexOf(true)
+7

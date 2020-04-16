@@ -1,0 +1,151 @@
+=============================
+Поиск индекса <ul>
+---------------------------
+> let s = i => `ul ul:nth-of-type(${i}) [href="/cthutq_58/"]`
+undefined
+> s(1)
+"ul ul:nth-of-type(1) [href="/cthutq_58/"]"
+> s(2)
+"ul ul:nth-of-type(2) [href="/cthutq_58/"]"
+--------------------
+> let d = i => document.querySelectorAll(s(i))
+undefined
+> d(1)
+NodeList []
+> d(2)
+NodeList(2) [a._2dbep.qNELH.kIKUG, a.sqdOP.yWX7d._8A5w5.ZIAjV.]
+> let i = 0
+undefined
+> do {console.log(i)} while (!d(++i).length)
+VM1660:1 0
+VM1660:1 1
+undefined
+> i
+2
+---------------------------------
+If owner has had comments => Check all <ul> and take a larger index
+-----------------------------------------
+> uls = document.querySelectorAll(`ul > ul`)
+NodeList(2) [ul.Mr508, ul.Mr508]0: ul.Mr5081: ul.Mr508length: 2__proto__: NodeList
+> i = document.querySelectorAll(`ul > ul`).length
+2
+> let s = i => `ul ul:nth-of-type(${i}) [href="/cthutq_58/"]`
+undefined
+> let d = i => document.querySelectorAll(s(i))
+undefined
+> while (!d(i).length) {i--;}
+undefined
+> i
+2
+=======================================
+Click Replay button (rb)
+-----------------
+> i
+2
+> rb = document.querySelector(`ul ul:nth-of-type(${i}) button:nth-child(2)`)
+<button class="FH9sR">Ответить</button>
+> rb.click()
+undefined
+=======================
+Заполнение textarea
+------------
+> t = document.querySelector(`form textarea`)
+<textarea aria-label="Добавьте комментарий..." placeholder="Добавьте комментарий..."
+ class="Ypffh" autocomplete="off" autocorrect="off" style="height: 18px;">@cthutq_58 </textarea>
+
+???????????????????????????
+> t = document.querySelector(`form textarea`)
+<textarea aria-label=​"Добавьте комментарий..." placeholder=​"Добавьте комментарий..." 
+ class=​"Ypffh" autocomplete=​"off" autocorrect=​"off" style=​"height:​ 18px;​">​@cthutq_58 ​</textarea>​
+> t.value
+"@cthutq_58 "
+> txtnode = document.createTextNode(`${t.value}asdasda`)
+"@cthutq_58 asdasda"
+> t.replaceChild(txtnode, t.childNodes[0])
+"@cthutq_58 "
+> t
+<textarea aria-label=​"Добавьте комментарий..." placeholder=​"Добавьте комментарий..."
+ class=​"Ypffh" autocomplete=​"off" autocorrect=​"off" style=​"height:​ 18px;​">​@cthutq_58 asdasda​</textarea>​
+???????????????????????
+
+=======================
+Click textarea button (tb)
+-------------
+> tb = document.querySelector(`textarea+button`)
+<button class="sqdOP yWX7d    y3zKF     " type="submit">Опубликовать</button>
+> tb.click()
+undefined
+========================
+Поиск индекса <ul>
+---------------------------
+......
+> i
+2
+=====================================
+Click Popup button (pb)
+------------------------
+> i
+2
+> pb = document.querySelector(`ul:nth-of-type(${i}) div:nth-child(2) button:first-child`)
+<button class=​"wpO6b " type=​"button">​…​</button>​
+> pb.click()
+undefined
+======================
+Click Delete on Popup
+---------------------
+> popup_bs = document.querySelectorAll(`[role="presentation"] button`)
+NodeList(3) [button.aOOlW.-Cab_., button.aOOlW.-Cab_., button.aOOlW.HoLwm.]0: button.aOOlW.-Cab_.1: button.aOOlW.-Cab_.2: button.aOOlW.HoLwm.length: 3__proto__: NodeList
+> popup_bs[1]
+<button class=​"aOOlW -Cab_   " tabindex=​"0">​Удалить​</button>​
+> popup_bs[1].click()
+undefined
+--------------------------
+or
+------------------------
+> popup_b = document.querySelector(`[role="presentation"] button:nth-child(2)`)
+<button class=​"aOOlW -Cab_   " tabindex=​"0">​Удалить​</button>​
+> popup_b.click()
+undefined
+=============================
+Checking Popup
+-----------------------
+> popup_bs = document.querySelectorAll(`[role="presentation"] button`)
+NodeList []
+> popup_bs.length
+0
+==========================
+Press "Cancel"
+-------------------------
+> popup_bs = document.querySelectorAll(`[role="presentation"] button`)
+NodeList(3) [button.aOOlW.-Cab_., button.aOOlW.-Cab_., button.aOOlW.HoLwm.]0: button.aOOlW.-Cab_.1: button.aOOlW.-Cab_.2: button.aOOlW.HoLwm.length: 3__proto__: NodeList
+--------
+> popup_bs.length
+3
+> popup_bs[1]
+<button class=​"aOOlW -Cab_   " tabindex=​"0">​Удалить​</button>​
+> popup_bs[2].click()
+undefined
+---------
+or
+--------
+> popup_bs.length
+2
+> popup_bs[1]
+<button class=​"aOOlW -Cab_   " tabindex=​"0">​Удалить​</button>​
+> popup_bs[1].click()
+undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

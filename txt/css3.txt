@@ -1,0 +1,42 @@
+============================
+username
+----------------------------
+> usn_all = document.querySelectorAll('[name=username]')
+NodeList [input._2hvTZ.pexuQ.zyHYP]
+0: input._2hvTZ.pexuQ.zyHYP
+length: 1
+__proto__: NodeList
+> usn = usn_all[0]
+<input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" 
+autocorrect="off" maxlength="75" name="username" type="text" class="_2hvTZ pexuQ zyHYP" value="">
+....................................
+> usn = document.querySelector('[name=username]')
+<input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" 
+autocorrect="off" maxlength="75" name="username" type="text" class="_2hvTZ pexuQ zyHYP" value="">
+=============================
+password
+-----------------------------
+> psw_all = document.querySelectorAll('[name=password]')
+NodeList [input._2hvTZ.pexuQ.zyHYP]
+.....................................
+> psw = document.querySelector('[name=password]')
+<input aria-label=​"Password" aria-required=​"true" autocapitalize=​"off" autocorrect=​"off" 
+name=​"password" type=​"password" class=​"_2hvTZ pexuQ zyHYP" value>​
+==============================
+Log in
+------------------------------
+> lbn_all = document.querySelectorAll("form button")
+NodeList(2) 
+[button.sqdOP.L3NKy.y3zKF., button.sqdOP.yWX7d.y3zKF.]
+0: button.sqdOP.L3NKy.y3zKF.
+1: button.sqdOP.yWX7d.y3zKF.
+length: 2__proto__: NodeList
+> lbn = lbn_all[0]
+<button class=​"sqdOP  L3NKy   y3zKF     " disabled type=​"submit">​<div class=​"                   
+Igw0E     IwRSH      eGOV_         _4EzTm                                                                                                              
+">​Log In​</div>​</button>
+........................................
+> lbn = document.querySelectorAll("form button")[0]
+<button class=​"sqdOP  L3NKy   y3zKF     " disabled type=​"submit">​<div class=​"                   
+Igw0E     IwRSH      eGOV_         _4EzTm                                                                                                              
+">​Log In​</div>​</button>​
