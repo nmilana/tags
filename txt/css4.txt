@@ -1,0 +1,22 @@
+> qbns = document.querySelectorAll('main section div>button')
+NodeList [button.wpO6b.]
+> qbn = document.querySelector('main section div>button')
+<button class=​"wpO6b " type=​"button">​…​</button>​
+> qbn.click()
+undefined
+------------------
+> out_btn = document.querySelectorAll('[role="presentation"] button')
+NodeList(10)
+ [button.aOOlW.HoLwm., button.aOOlW.HoLwm., button.aOOlW.HoLwm.,
+ button.aOOlW.HoLwm., button.aOOlW.HoLwm., button.aOOlW.HoLwm.,
+ button.aOOlW.HoLwm., button.aOOlW.HoLwm., button.aOOlW.HoLwm., button.aOOlW.HoLwm.]
+> out_btns = document.querySelectorAll('[role="presentation"] button:nth-child(9)')
+NodeList [button.aOOlW.HoLwm.]
+> out_btn = document.querySelector('[role="presentation"] button:nth-child(9)')
+<button class=​"aOOlW   HoLwm " tabindex=​"0">​Выйти​</button>​
+> out_btn.click()
+
+
+
+
+

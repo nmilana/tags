@@ -1,0 +1,31 @@
+ConnectionRefusedError:
+ [WinError 10061] 
+ No connection could be made because the target machine actively refused it
+ Невозможно установить соединение, потому что целевая машина активно отказалась от него
+
+During handling of the above exception, another exception occurred:
+Во время обработки вышеупомянутого исключения произошло другое исключение:
+
+urllib3.exceptions.NewConnectionError:
+ <urllib3.connection.HTTPConnection object at 0x0000023307BD6F10>:
+  Failed to establish a new connection:
+   [WinError 10061]
+   No connection could be made because the target machine actively refused it
+   Невозможно установить соединение, потому что целевая машина активно отказалась от него
+
+During handling of the above exception, another exception occurred:
+Во время обработки вышеупомянутого исключения произошло другое исключение:
+
+urllib3.exceptions.MaxRetryError:
+ HTTPConnectionPool(host='127.0.0.1', port=63823):
+  Max retries exceeded with url:
+   /session/6815a6c5dc685a0daa02ea1e7ec60811/url (
+    Caused by NewConnectionError('
+     <urllib3.connection.HTTPConnection object at 0x0000023307BD6F10>:
+      Failed to establish a new connection:
+      Не удалось установить новое соединение:
+       [WinError 10061]
+       No connection could be made because the target machine actively refused it
+       Невозможно установить соединение, потому что целевая машина активно отказалась от него
+    ')
+    )
