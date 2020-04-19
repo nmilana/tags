@@ -7,7 +7,7 @@ import random
 browser = webdriver.Chrome(executable_path="driver/chromedriver")
 
 # log/pass
-f = open("files/sign.txt", "r", encoding='utf-8')
+f = open("../sign.txt", "r", encoding='utf-8')
 time.sleep(0.5)
 log = []
 n_log = 0

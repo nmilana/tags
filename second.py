@@ -3,7 +3,7 @@ import selenium.webdriver.support.expected_conditions as EC
 import time
 
 # log/pass
-f = open("files/sign.txt", "r", encoding='utf-8')
+f = open("../sign.txt", "r", encoding='utf-8')
 time.sleep(0.5)
 log = []
 n_log = 0
